@@ -52,7 +52,7 @@ public class CoinSpawner : MonoBehaviour
         coin.SetPositionNumber(spawnPointNumber);
         _availableSpawnPoints.Remove(spawnPointNumber);
         coin.gameObject.SetActive(true);
-        coin.CoinTaked += _pool.Release;
+        coin.Taked += _pool.Release;
 
         if ((_availableSpawnPoints.Count == 0) && (_coinSpawnCoroutine != null))
         {
@@ -65,7 +65,7 @@ public class CoinSpawner : MonoBehaviour
     {
         coin.gameObject.SetActive(false);
         _availableSpawnPoints.Add(coin.PositionNumber());
-        coin.CoinTaked -= _pool.Release;
+        coin.Taked -= _pool.Release;
 
         if (_coinSpawnCoroutine == null)
         {

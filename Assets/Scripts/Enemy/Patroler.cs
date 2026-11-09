@@ -7,12 +7,7 @@ public class Patroler : MonoBehaviour
 
     private int _currentPoint = 0;
 
-    private void Update()
-    {
-        Patrol();
-    }
-
-    private void Patrol()
+    public void Patrol()
     {
         Vector2 currentPosition = transform.position;
         currentPosition.x = Mathf.MoveTowards(transform.position.x, _patrolingPoints[_currentPoint].position.x, _speed * Time.deltaTime);

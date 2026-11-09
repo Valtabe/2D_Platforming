@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PlayerTracker : MonoBehaviour
+public class CameraTracker : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private float _xOffset;
 
-    private void Update()
+    private void LateUpdate()
     {
         Vector3 position = transform.position;
         position.x = _player.transform.position.x + _xOffset;

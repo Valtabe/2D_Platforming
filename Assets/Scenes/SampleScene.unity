@@ -4419,6 +4419,7 @@ GameObject:
   - component: {fileID: 86832022}
   - component: {fileID: 86832023}
   - component: {fileID: 86832024}
+  - component: {fileID: 86832025}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4556,7 +4557,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &86832020
 MonoBehaviour:
@@ -4585,7 +4586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 385233932}
   _speed: 4
-  _animator: {fileID: 86832024}
 --- !u!114 &86832022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4634,6 +4634,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &86832025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86832015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2c4916cd01af54fa5502489dbfad9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputReader: {fileID: 385233932}
+  _animator: {fileID: 86832024}
 --- !u!1 &382585660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,7 +4723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05180757e4ca6984ea4d9af224270e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsHorizontalInput: 0
 --- !u!4 &385233933
 Transform:
   m_ObjectHideFlags: 0
@@ -5089,6 +5102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6f996454a5474393f842de647a2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _patroler: {fileID: 917489370}
 --- !u!50 &917489372
 Rigidbody2D:
   serializedVersion: 4

@@ -6,13 +6,13 @@ public class Coin : MonoBehaviour
 {
     private int _positionNumber;
 
-    public event Action<Coin> CoinTaked;
+    public event Action<Coin> Taked;
 
     public int PositionNumber() => _positionNumber;
 
     public void Take()
     {
-        CoinTaked?.Invoke(this);
+        Taked?.Invoke(this);
     }
 
     public void SetPositionNumber(int number) 
