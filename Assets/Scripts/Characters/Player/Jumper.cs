@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Jumper : MonoBehaviour
 {
-    [SerializeField] private InputReader _inputReader;
     [SerializeField] private GroundChecker _groundChecker;
     [SerializeField] private float _jumpForce;
 
@@ -13,17 +12,7 @@ public class Jumper : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable()
-    {
-        _inputReader.JumpInputing += Jump;
-    }
-
-    private void OnDisable()
-    {
-        _inputReader.JumpInputing -= Jump;
-    }
-
-    private void Jump()
+    public void Jump()
     {
         if (_groundChecker.IsGround())
         {

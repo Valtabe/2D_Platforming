@@ -5,12 +5,12 @@ public class InputReader : MonoBehaviour
 {
     private readonly string _horizontal = "Horizontal";
     private readonly KeyCode _jumpButton = KeyCode.Space;
-
-    
+    private readonly KeyCode _attackButton = KeyCode.F;    
 
     public event Action<float> DirectionInputing;
     public event Action<bool> DirectionButtonStateChange;
     public event Action JumpInputing;
+    public event Action AttackInputing;
 
     private bool _isHorizontalInput = false;
 
@@ -37,9 +37,14 @@ public class InputReader : MonoBehaviour
             DirectionButtonStateChange(_isHorizontalInput);
         }
 
-        if (Input.GetKey(_jumpButton))
+        if (Input.GetKeyDown(_jumpButton))
         {
             JumpInputing?.Invoke();
+        }
+
+        if (Input.GetKeyDown(_attackButton))
+        {
+            AttackInputing?.Invoke();
         }
     }
 }
